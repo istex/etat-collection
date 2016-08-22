@@ -1,0 +1,22 @@
+/* MIXINS */
+/* GENERALS THEME */
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: white;
+  color: #282a36;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.istexBlue {
+  color: #3b788f; }
+
+.istexGreen {
+  color: #c4d733;
+  text-shadow: -0.5px 0 #3b788f, 0 0.5px #3b788f, 0.5px 0 #3b788f, 0 -0.5px #3b788f; }
+
+.primaryFontColor {
+  color: #282a36; }

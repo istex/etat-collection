@@ -3,8 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "clean": "rm -rf ./dist",
+    "clean:osx": "sudo rm -rf ./dist/osx",
+    "clean:win": "sudo rm -rf ./dist/win",
+    "pack": "npm run clean && npm run pack:osx && npm run pack:win",
+    "pack:osx": "npm run clean:osx && electron-packager app \"IstexCollection\" --out=dist/osx --platform=darwin --arch=x64 --version=1.3.3 --icon=assets/osx/logo.icns --ignore=dist --ignore=builder.json --ignore=bower.json --ignore=README.md --ignore=.gitignore --ignore=preview.png",
+    "pack:win": "npm run clean:win && electron-packager app \"IstexCollection\" --out=dist/win --platform=win32 --arch=ia32 --version=1.3.3 --icon=assets/win/logo.ico --ignore=dist --ignore=builder.json --ignore=bower.json --ignore=README.md --ignore=.gitignore --ignore=preview.png",
     "build-css": "node-sass app/assets/sass/base.scss app/assets/css/style.css",
-    "start": "nodemon -e scss -x \"npm run build-css\" & electron app &",
+    "checkSass": "nodemon -e scss -x \"npm run build-css\"",
+    "start": "electron app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -12,6 +19,7 @@
   "devDependencies": {
     "Q": "0.0.1",
     "asar": "^0.12.1",
+    "electron-packager": "7.7.0",
     "electron-prebuilt": "^1.3.2",
     "fs-jetpack": "^0.9.2",
     "node-sass": "^3.8.0",
@@ -19,6 +27,7 @@
     "rcedit": "^0.5.1"
   },
   "dependencies": {
-    "electron": "^1.3.2"
+    "electron": "^1.3.3",
+    "electron-packager": "^7.7.0"
   }
 }

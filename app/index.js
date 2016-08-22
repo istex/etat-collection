@@ -1,6 +1,6 @@
 "use strict";
 
-var App = require('./libs/app-class.js');
-var app = new App();
+const App = require('./libs/app-class.js'),
+      app = new App();
       
 app.checkWindow();

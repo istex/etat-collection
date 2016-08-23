@@ -4,7 +4,7 @@
   	<title>ISTEX API ETAT COLLECTION CSV GENERATOR</title>
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
   </head>
-  <body>
+  <body ng-class="bodyClass">
     <span class="error" ng-show="error"> {{error}}</span>
   	<h1>
       <div class="logo">
@@ -14,14 +14,21 @@
     <form id="reqApi">
       <div class="row">
         <div class="input-field col s12">
-          <input type="url" class="validate" pattern="https?://9.+" name="urlApi" ng-model="app.url" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 1000 } }"/>
+          <i class="material-icons prefix">input</i>
+          <input id="urlApi" type="url" class="validate" pattern="https?://.+" name="urlApi" ng-model="app.url" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 1000 } }" />
+          <label for="urlApi" data-error="VEUILLEZ ENTRER UNE URL API" data-success="ok">Url</label>
         </div>
       </div>
       <br/>
     </form>
-    using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <footer>
+      using node <script>document.write(process.versions.node)</script>,
+      Chrome <script>document.write(process.versions.chrome)</script>,
+      and Electron <script>document.write(process.versions.electron)</script>.
+    </footer>
+    <script type="text/javascript">
+      require('../assets/js/materialize.min.js');
+    </script>
     <script type="text/javascript" >
       require('../assets/js/main.js');
     </script>

@@ -1,3 +1,580 @@
-{
-  "_error": "La ressource que vous demandez n'existe pas"
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>ISTEX API Documentation</title>
+
+    <link type="text/css" rel="stylesheet" href="./assets/css/reset.css">
+    <link type="text/css" rel="stylesheet" href="https://yandex.st/highlightjs/6.1/styles/solarized_dark.min.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/docs.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/print.css" media="print">
+    <link type="text/css" rel="stylesheet" href="../public/styles/doc.css">
+
+    <script type="text/javascript" src="./assets/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="https://yandex.st/highlightjs/6.1/highlight.min.js"></script>
+    <script type="text/javascript" src="./assets/js/lunr.min.js"></script>
+    <script src="//content-delivery.istex.fr/web-header/main.js"></script>
+
+    
+
+    <script type="text/javascript">var BASE_URL = "./";</script>
+    <script type="text/javascript" src="./assets/js/viewer.js"></script>
+
+    
+</head>
+<body>
+    <div id="page">
+        <a name="top" />
+        <header id="header">
+            <h1><a href="./">ISTEX API Documentation</a></h1>
+        </header>
+        
+
+<div id="sidebar">
+    <form action="./search.html"><input id="search" type="text" placeholder="Search" name="q" /></form>
+    <nav id="toc">
+        
+    <ol>
+    
+        <li>
+            <a href="./050-global.html#acces-aux-donnees">Accès aux données</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="./050-global.html#liste-des-champs-et-formats-disponibles">Liste des champs et formats disponibles</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./100-metas.html#acces-aux-metadonnees">Accès aux métadonnées</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="./100-metas.html#liste-des-formats-disponibles">Liste des formats disponibles</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./100-metas.html#notices-dorigine">Notices d'origine</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./100-metas.html#format-pivot-mods">Format pivot Mods</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./100-metas.html#notices-xml">Notices XML</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./100-metas.html#notices-marc">Notices Marc</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./200-fulltext.html#acces-au-fulltext">Accès au fulltext</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="./200-fulltext.html#liste-des-formats-disponibles">Liste des formats disponibles</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./200-fulltext.html#documents-primaires-format-original">Document(s) primaire(s)  (format original)</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./200-fulltext.html#autres-formats">Autres formats</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./250-enrichments.html#enrichissements">Enrichissements</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="./250-enrichments.html#acces-aux-enrichissements">Accès aux enrichissements</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="./250-enrichments.html#liste-des-enrichissements-disponibles">Liste des enrichissements disponibles</a>
+            
+        </li>
+    
+        <li>
+            <a href="./250-enrichments.html#recuperation-des-enrichissements">Récupération des enrichissements</a>
+            
+        </li>
+    
+        <li>
+            <a href="./250-enrichments.html#consolidation-des-enrichissements-avec-le-tei-de-base">Consolidation des enrichissements avec le TEI de base</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./250-enrichments.html#ajout-denrichissements">Ajout d'enrichissements</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#recherche-de-documents">Recherche de documents</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="./300-search.html#calcul-du-score">Calcul du score</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#recherche-globale">Recherche globale</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#recherche-avancee">Recherche avancée</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="./300-search.html#recherche-par-auteur">Recherche par auteur</a>
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#recherche-par-redacteur">Recherche par rédacteur</a>
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#recherche-par-genre-de-document">Recherche par genre de document</a>
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#recherche-par-genre-de-serie">Recherche par genre de série</a>
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#recherche-par-sujet">Recherche par sujet</a>
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#recherche-par-sujet-de-serie">Recherche par sujet de série</a>
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#recherche-par-langue">Recherche par langue</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#syntaxe-des-requetes">Syntaxe des requêtes</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#recherche-par-corpus">Recherche par corpus</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#selection-des-champs-renvoyes">Sélection des champs renvoyés</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#facettes">Facettes</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="./300-search.html#alias-disponibles">Alias disponibles</a>
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#facettes-dynamiques-basees-sur-le-mapping">Facettes dynamiques basées sur le mapping</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#tris-bases-sur-le-mapping">Tris basés sur le mapping</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#tri-aleatoire">Tri aléatoire</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#parametres-de-pagination">Paramètres de pagination</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#operateur-par-defaut">Opérateur par défaut</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#exemples-de-recherche-combinant-tous-les-parametres">Exemples de recherche combinant tous les paramètres</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#liste-des-editeurs-disponibles">Liste des éditeurs disponibles</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./300-search.html#extraction">Extraction</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./350-openurl.html#openurl-10">OpenURL 1.0</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="./350-openurl.html#implementation-du-standard-z3988-2004">Implémentation du standard Z39.88-2004</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./350-openurl.html#resolveur-de-liens">Résolveur de liens</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./350-openurl.html#desactiver-la-redirection-automatique-vers-la-ressource">Désactiver la redirection automatique vers la ressource</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./400-faq.html#faq-foire-aux-questions">FAQ (Foire aux questions)</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="./400-faq.html#quest-ce-que-le-format-mods">Qu'est-ce que le format Mods ?</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./400-faq.html#quentend-t-on-par-identification-avec-basic-auth">Qu'entend-t-on par identification avec basic-auth ?</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./400-faq.html#je-narrive-pas-a-me-connecter-a-lapi-lacces-mest-refuse">Je n'arrive pas à me connecter à l'API, l'accès m'est refusé !</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./400-faq.html#usage-documentaire-vs-usage-recherche">Usage documentaire Vs. Usage recherche ?</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="./400-faq.html#a-quoi-servent-les-indicateurs-de-qualite">À quoi servent les &quot;indicateurs de qualité&quot; ?</a>
+            
+                
+    <ol>
+    
+</ol>
+
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+</ol>
+
+    </nav>
+    
+    <nav id="links">
+        <ul>
+            
+        </ul>
+    </nav>
+    
+</div>
+
+        <div id="content">
+            <h1 id="api-istex-http-rest">API ISTEX HTTP/Rest</h1>
+<p>La plate-forme ISTEX fournit l&#39;ensemble de ses services sous la forme d&#39;une API Web utilisant le protocole HTTP dans un esprit Restful.</p>
+<p>Afin d&#39;obtenir un accès à la plate-forme ISTEX, deux solutions s&#39;offrent à vous :</p>
+<ul>
+<li>Obtenir un accès par IP dépendant de l&#39;endroit depuis lequel vous y accédez. Cette option est pratique si vous souhaitez faire autoriser toute votre unité/laboratoire/université. Nous devrons cependant prendre les mesures nécessaires afin de nous assurer de vos droits d&#39;accès d&#39;un point de vu contractuel.</li>
+<li>Obtenir un accès par login/mot de passe via le serveur LDAP de l&#39;INIST-CNRS situé à  <a href="https://ia.inist.fr">https://ia.inist.fr</a>. Après nous avoir communiqué votre e-mail et votre nom et prénom (à <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x61;&#112;&#x69;&#45;&#117;&#115;&#101;&#114;&#115;&#64;&#108;&#x69;&#115;&#x74;&#x65;&#x73;&#x2e;&#x69;&#x73;&#116;&#x65;&#120;&#46;&#102;&#114;">&#x61;&#112;&#x69;&#45;&#117;&#115;&#101;&#114;&#115;&#64;&#108;&#x69;&#115;&#x74;&#x65;&#x73;&#x2e;&#x69;&#x73;&#116;&#x65;&#120;&#46;&#102;&#114;</a>) tel que vous les avez renseignés dans le formulaire d&#39;enregistrement sur <a href="https://ia.inist.fr">https://ia.inist.fr</a>, vous bénéficierez d&#39;un accès indépendamment de votre localisation géographique.</li>
+</ul>
+<h1 id="identification-par-login-mot-de-passe">Identification par login/mot de passe</h1>
+<p>Si vous vous connectez à l&#39;API en dehors de votre localisation géographique, il vous sera demandé de vous identifier par login/mot de passe via le serveur LDAP.</p>
+<p>Si vous vous connectez via un navigateur, ce dernier affichera une fenêtre d&#39;authentification où il sera nécessaire de renseigner votre adresse mail comme identifiant et votre mot de passe.</p>
+<p>Si vous souhaitez vous connecter en ligne de commande, il vous sera nécessaire de rentrer les paramètres suivants :</p>
+<p>Pour <strong>curl</strong> : curl -u <span class="login">{nom de famille}</span>:<span class="mdp">{mot de passe}</span> <span class="urlAPI">{URL de l&#39;API}</span></p>
+<p>Pour <strong>wget</strong> : wget --user=<span class="login">{nom de famille}</span> --password=<span class="mdp">{mot de passe}</span> <span class="urlAPI">{URL de l&#39;API}</span></p>
+<h1 id="url-de-v-rification-de-connexion">URL de vérification de connexion</h1>
+<p>Si vous souhaitez vérifier que vous êtes bien authentifié sur l&#39;API, vous pouvez utiliser la route <a href="https://api.istex.fr/auth">https://api.istex.fr/auth</a></p>
+
+
+
+
+        </div>
+        <footer id="footer">
+            Powered by <a href="http://github.com/maximebf/beautiful-docs">beautiful-docs</a> -
+            <a href="#top">Back to top</a> - <a href="./all.html">Everything on a single page</a>
+            - <a href="?print=1">Print current page</a> - <a href="./all.html?print=1">Print all pages</a>
+            
+        </footer>
+    </div>
+</body>
+</html>

@@ -2,6 +2,7 @@
 
 
 $bgColor : #03a9f4;
+$wrongColor : #c62828;
 $fontColor : rgb(200,200,200);
 $fontBlue : rgb(59,120,143);
 $fontGreen : rgb(196,215,51);
@@ -44,7 +45,15 @@ body{
   @include flex();
 }
 
+.badUrl{
+  background : $wrongColor;
+}
+
 h1{
   @include reset();
   @include flex();
+}
+
+footer{
+  font-size: 11px;
 }

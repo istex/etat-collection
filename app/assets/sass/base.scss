@@ -20,14 +20,6 @@ $fontGreen : rgb(196,215,51);
 
 /* GENERALS THEME */
 
-body{
-  @include reset();
-  background : $bgColor;
-  color : $fontColor;
-  height: 100vh;
-  @include flex();
-}
-
 .istexBlue{
   color : $fontBlue;
 }
@@ -39,4 +31,17 @@ body{
 
 .primaryFontColor{
   color : $fontColor;
+}
+
+body{
+  @include reset();
+  background : $bgColor;
+  color : $fontColor;
+  height: 100vh;
+  @include flex();
+}
+
+h1{
+  @include reset();
+  @include flex();
 }

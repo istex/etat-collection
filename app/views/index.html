@@ -7,9 +7,12 @@
   <body>
     <span class="error" ng-show="error"> {{error}}</span>
   	<h1>
-      <span class="istexBlue">IST</span><span class="istexGreen">EX</span> <span class="primaryFontColor">SCRAPPER</span>
+      <div class="logo">
+        <span class="istexBlue">IST</span><span class="istexGreen">EX</span> <span class="primaryFontColor">SCRAPPER</span>
+      </div>
       <form id="reqApi">
-        <input type="url" name="urlApi" ng-model="app.url" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 1000, 'blur': 0 } }">
+        <input type="url" name="urlApi" ng-model="app.url" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 1000 } }"/>
+        <br/>
         {{app.url}}
       </form>
     </h1>

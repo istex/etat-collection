@@ -6442,8 +6442,9 @@ body {
   justify-content: center;
   align-items: center; }
 
-.badUrl {
-  background: #c62828; }
+.error {
+  background: #ff6f00;
+  color: #c8c8c8; }
 
 h1 {
   margin: 0 !important;

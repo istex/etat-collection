@@ -4,8 +4,10 @@
   	<title>ISTEX API ETAT COLLECTION CSV GENERATOR</title>
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
   </head>
-  <body ng-class="bodyClass">
-    <span class="error" ng-show="error"> {{error}}</span>
+  <body>
+    <div class="card-panel error" ng-show="error">
+      {{error}}
+    </div>
   	<h1>
       <div class="logo">
         <span class="istexBlue">IST</span><span class="istexGreen">EX</span> <span class="primaryFontColor">SCRAPPER</span>
@@ -16,7 +18,7 @@
         <div class="input-field col s12">
           <i class="material-icons prefix">input</i>
           <input id="urlApi" type="url" class="validate" pattern="https?://.+" name="urlApi" ng-model="app.url" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 1000 } }" />
-          <label for="urlApi" data-error="VEUILLEZ ENTRER UNE URL API" data-success="ok">Url</label>
+          <label for="urlApi" data-error="VEUILLEZ ENTRER UNE URL API">Url</label>
         </div>
       </div>
       <br/>

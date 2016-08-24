@@ -2,7 +2,7 @@
 
 
 $bgColor : #03a9f4;
-$wrongColor : #c62828;
+$wrongColor : #ff6f00; //orange
 $fontColor : rgb(200,200,200);
 $fontBlue : rgb(59,120,143);
 $fontGreen : rgb(196,215,51);
@@ -45,8 +45,9 @@ body{
   @include flex();
 }
 
-.badUrl{
+.error{
   background : $wrongColor;
+  color : $fontColor;
 }
 
 h1{

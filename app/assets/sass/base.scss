@@ -55,6 +55,10 @@ h1{
   @include flex();
 }
 
+.proxyBlock{
+  text-align: center;
+}
+
 footer{
   font-size: 11px;
 }

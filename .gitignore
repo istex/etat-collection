@@ -1,6 +1,8 @@
 # Created by https://www.gitignore.io/api/intellij,linux,macos,node,windows
 
 dist
+tmp
+app/tmp
 
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm

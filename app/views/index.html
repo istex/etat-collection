@@ -21,7 +21,11 @@
           <label for="urlApi" data-error="VEUILLEZ ENTRER UNE URL API">Url</label>
         </div>
       </div>
-      <br/>
+      <div class="row proxyBlock">
+        <input type="checkbox" class="filled-in" ng-model="proxy" id="proxy" ng-checked="proxy" />
+        <label for="proxy">Proxy</label>
+        {{proxy}}
+      </div>
     </form>
     <footer>
       using node <script>document.write(process.versions.node)</script>,

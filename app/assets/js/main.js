@@ -6,22 +6,24 @@ const angular = require('angular'),
       mkdirp = require('mkdirp'),
       sha1 = require('sha1'),
       csv = require('json-2-csv'),
+      csvw = require('csvwriter'),
       fs = require('fs');
 
 const tmpPath = path.resolve(__dirname , '../../tmp');
 
-const optionsCsv = {
-    delimiter : {
-        wrap  : '"', // Double Quote (") character
-        field : ',', // Comma field delimiter
-        array : ';', // Semicolon array value delimiter
-        eol   : '\n' // Newline delimiter
-    },
-    prependHeader    : true,
-    sortHeader       : false,
-    trimHeaderValues : true,
-    trimFieldValues  :  true
-};
+const paramsCsv = {
+  delimiter: ';',
+  arrayDelimiter: ',', 
+  crlf : true, 
+  decimalSeparator : '.', 
+  quote : '"', 
+  doublequote: true, 
+  nullString : '',
+  quoteMode : 0, 
+  utfBom: true,
+  maxDepth : -1, 
+  zero : true
+}
 
 angular
   .module('app', [])
@@ -88,8 +90,8 @@ function appController($scope) {
 function creatCSV(path,cb){
   let obj = require(path);
   if(obj && (!obj.aggregations)){
-    csv.json2csv(obj.hits,(err,csv)=>{
+    csvw(obj.hits,paramsCsv,(err,csv)=>{
       cb(csv)
-    }, optionsCsv);
+    });
   }
 }

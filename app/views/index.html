@@ -2,9 +2,12 @@
 <html ng-app="app" ng-controller="appController as app">
   <head>
   	<title>ISTEX API ETAT COLLECTION CSV GENERATOR</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/c3.min.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
   </head>
   <body>
+    <div class="main">
+      
     <div class="card-panel error" ng-show="error">
       {{error}}
     </div>
@@ -27,6 +30,8 @@
         {{proxy}}
       </div>
     </form>
+    </div>
+    <div id="chart"></div>
     <footer>
       using node <script>document.write(process.versions.node)</script>,
       Chrome <script>document.write(process.versions.chrome)</script>,

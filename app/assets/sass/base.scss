@@ -37,7 +37,7 @@ $fontGreen : rgb(196,215,51);
   color : $fontColor;
 }
 
-body{
+.main{
   @include reset();
   background : $bgColor;
   color : $fontColor;

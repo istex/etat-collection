@@ -6431,7 +6431,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .primaryFontColor {
   color: #c8c8c8; }
 
-body {
+.main {
   margin: 0 !important;
   padding: 0 !important;
   background: #03a9f4;

@@ -7,6 +7,7 @@ const angular = require('angular'),
       sha1 = require('sha1'),
       csv = require('json-2-csv'),
       csvw = require('csvwriter'),
+      c3 = require('c3'),
       fs = require('fs');
 
 const tmpPath = path.resolve(__dirname , '../../tmp');
@@ -54,8 +55,9 @@ function appController($scope) {
         }
       };
       let idReq = sha1(newValue.split('api.istex.fr')[1]),
-          result = fs.createWriteStream(tmpPath + '/' + idReq + '.json'),
-          csvPath =tmpPath + '/' + idReq + '.csv';
+          jsonPath = tmpPath + '/' + idReq + '.json',
+          csvPath =tmpPath + '/' + idReq + '.csv',
+          result = fs.createWriteStream(jsonPath);
 
       //CheckProxy
       let r = $scope.proxy ? request.defaults({'proxy':'http://proxyout.inist.fr:8080'}) : request.defaults({proxy : false,tunnel: false});
@@ -66,7 +68,6 @@ function appController($scope) {
         console.log(response.headers['content-type']) // 'image/png'
       })
       .on('error', (err)=> {
-        console.log(err)
         $scope.error = 'Impossible de telecharger le résultat de l\'api';
         throw new Error(err);
         return;
@@ -76,10 +77,25 @@ function appController($scope) {
       // Convert2CSV
 
       result.on('finish', ()=>{
-        creatCSV(result.path, (csv)=>{
-          console.log(csv)
+        creatCSV(result.path, (csv,obj)=>{
           fs.writeFile(csvPath,csv,(err)=>{
-
+            console.log("obj : ", obj);
+            var chart = c3.generate({
+              data: {
+                json: obj,
+                type: 'line',
+                keys: {
+                  x: 'keyAsString',
+                  value: ['docCount']
+                }             
+              },
+              axis: {
+                x: {
+                  min : 1800,
+                  max: 2010  
+                }
+              }
+            });
           })
         });
       })
@@ -90,8 +106,7 @@ function appController($scope) {
 function creatCSV(path,cb){
   let obj = require(path);
   obj = (obj && (!obj.aggregations)) ? obj.hits : obj.aggregations[Object.keys(obj.aggregations)[0]].buckets;
-  
   csvw(obj,paramsCsv,(err,csv)=>{
-    cb(csv)
+    cb(csv,obj)
   });
 }

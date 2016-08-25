@@ -89,9 +89,9 @@ function appController($scope) {
 
 function creatCSV(path,cb){
   let obj = require(path);
-  if(obj && (!obj.aggregations)){
-    csvw(obj.hits,paramsCsv,(err,csv)=>{
-      cb(csv)
-    });
-  }
+  obj = (obj && (!obj.aggregations)) ? obj.hits : obj.aggregations[Object.keys(obj.aggregations)[0]].buckets;
+  
+  csvw(obj,paramsCsv,(err,csv)=>{
+    cb(csv)
+  });
 }

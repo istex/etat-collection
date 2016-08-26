@@ -4,7 +4,7 @@ Electron app permettant de renvoyer un CSV etat de collection ISTEX
 ![SCREENSHOT](https://raw.githubusercontent.com/istex/etat-collection/master/screenshot.png)
 
 ## Installation
-`cd istex-collection && npm install && cd app && npm install`
+`cd etat-collection && npm install && cd app && npm install`
 
 ## Deployer l'application
 Pour déployer l'application pour win,osx,linux (.exe,.app,.deb)

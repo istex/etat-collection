@@ -22,3 +22,10 @@ Pour lancer l'application en mode developpeur
   `npm start`
 
 
+## Utilisation
+
+1. Choisissez ou non d'activer le proxy INIST
+2. Copier coller un lien istex (aggregation/facette imbriquée à venir)
+  ex : `https://api.istex.fr/document/?q=*&facet=publicationDate[perYear]&size=0`
+3. Le résultat est directement visible en scrollant en bas dans l'application
+

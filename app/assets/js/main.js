@@ -1,5 +1,5 @@
 'use strict';
-
+// work with https://api.istex.fr/document/?q=language:fre&facet=publicationDate[perYear]&size=0
 const angular = require('angular'),
       request = require('request'),
       path = require('path'),

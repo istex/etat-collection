@@ -1,24 +1,21 @@
 {
   "name": "istex-collection",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "scripts": {
     "clean": "rm -rf ./dist",
     "clean:osx": "sudo rm -rf ./dist/osx",
     "clean:win": "sudo rm -rf ./dist/win",
     "clean:linux": "sudo rm -rf ./dist/linux",
-
-    "zip:osx" : "find 'dist/osx/' -type d -name '*x64' -exec zip -q -r dist/osx.zip {} \\;",
-    "zip:win32" : "find 'dist/win/' -type d -name '*ia32' -exec zip -q -r dist/win32.zip {} \\;",
-    "zip:win64" : "find 'dist/win/' -type d -name '*x64' -exec zip -q -r dist/win64.zip {} \\;",
-    "zip:linux32" : "find 'dist/linux/' -type d -name '*ia32' -exec zip -q -r dist/linux32.zip {} \\;",
-    "zip:linux64" : "find 'dist/linux/' -type d -name '*x64' -exec zip -q -r dist/linux64.zip {} \\;",
-
+    "zip:osx": "find 'dist/osx/' -type d -name '*x64' -exec zip -q -r dist/osx.zip {} \\;",
+    "zip:win32": "find 'dist/win/' -type d -name '*ia32' -exec zip -q -r dist/win32.zip {} \\;",
+    "zip:win64": "find 'dist/win/' -type d -name '*x64' -exec zip -q -r dist/win64.zip {} \\;",
+    "zip:linux32": "find 'dist/linux/' -type d -name '*ia32' -exec zip -q -r dist/linux32.zip {} \\;",
+    "zip:linux64": "find 'dist/linux/' -type d -name '*x64' -exec zip -q -r dist/linux64.zip {} \\;",
     "pack": "npm run clean && npm run pack:osx && npm run pack:win && npm run pack:linux ",
     "pack:osx": "npm run clean:osx && electron-packager app \"IstexCollection\" --out=dist/osx --platform=darwin --arch=x64 --version=1.3.3 --icon=assets/osx/logo.icns --ignore=dist --ignore=builder.json --ignore=bower.json --ignore=README.md --ignore=.gitignore --ignore=preview.png && npm run zip:osx",
     "pack:win": "npm run clean:win && electron-packager app \"IstexCollection\" --out=dist/win --platform=win32 --arch=ia32,x64 --version=1.3.3 --icon=assets/win/logo.ico --ignore=dist --ignore=builder.json --ignore=bower.json --ignore=README.md --ignore=.gitignore --ignore=preview.png && npm run zip:win32 && npm run zip:win64",
     "pack:linux": "npm run clean:linux && electron-packager app \"IstexCollection\" --out=dist/linux --platform=linux --arch=ia32,x64 --version=1.3.3 --icon=assets/win/logo.ico --ignore=dist --ignore=builder.json --ignore=bower.json --ignore=README.md --ignore=.gitignore --ignore=preview.png && npm run zip:linux32 && npm run zip:linux64",
-    
     "build-css": "node-sass app/assets/sass/base.scss app/assets/css/style.css",
     "checkSass": "nodemon -e scss -x \"npm run build-css\"",
     "start": "electron app",

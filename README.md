@@ -11,8 +11,7 @@ Technos :
 
 ## Utilisation
 
-0. Télécharger la [derniére version de l'application](https://github.com/istex/etat-collection/releases) pour votre systéme.
-0.b. Dezipper l'archive & lancer l'application
+0. Télécharger la [derniére version de l'application](https://github.com/istex/etat-collection/releases) pour votre systéme puis dézipper l'archive & lancer l'application
 1. Choisissez ou non d'activer le proxy INIST
 2. Copier coller un lien istex (aggregation/facette imbriquée à venir)
   ex : `https://api.istex.fr/document/?q=*&facet=publicationDate[perYear]&size=0`

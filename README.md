@@ -26,12 +26,10 @@ Electron app permettant de renvoyer un CSV etat de collection ISTEX
 ### Installation
 `git clone https://github.com/istex/etat-collection && cd etat-collection && npm install && cd app && npm install`
 
-### Deployer l'application
-Pour déployer l'application pour win,osx,linux (.exe,.app,.deb)
-
-`npm run pack`
-
 ### Pour lancer l'application en mode developpeur
+
+0. Activer les developpeur tools:
+  Décommenter la ligne `//this.win.webContents.openDevTools();` dans `/app/libs/app-class.js`
 
 1. Surveiller les fichier sass:
 
@@ -50,3 +48,11 @@ Pour déployer l'application pour win,osx,linux (.exe,.app,.deb)
 - Le code sass se trouve dans `/app/assets/sass/base.scss`
 - Le template HTML se trouve dans `/app/views/index.html`
 
+
+### Deployer l'application
+Pour déployer l'application pour win,osx,linux (.exe,.app,.deb)
+
+0. Desactiver les developpeur tools:
+  Commenter la ligne `//this.win.webContents.openDevTools();` dans `/app/libs/app-class.js`
+
+1. Packager `npm run pack`

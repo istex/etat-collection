@@ -11,7 +11,7 @@ class App{
   createWindow(width=800,height=600){
     this.win = new this.BrowserWindow({width : width, height : height});
     this.win.loadURL(this._url);
-    this.win.webContents.openDevTools();
+    //this.win.webContents.openDevTools();
     this.win.on('closed', () => {this.win = null});
   }
   checkWindow(){

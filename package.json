@@ -7,7 +7,7 @@
     "clean:osx": "sudo rm -rf ./dist/osx",
     "clean:win": "sudo rm -rf ./dist/win",
     "clean:linux": "sudo rm -rf ./dist/linux",
-    "pack": "npm run clean && npm run pack:osx && npm run pack:win && npm run pack:linux && npm run pack:mas",
+    "pack": "npm run clean && npm run pack:osx && npm run pack:win && npm run pack:linux",
     "pack:osx": "npm run clean:osx && electron-packager app \"IstexCollection\" --out=dist/osx --platform=darwin --arch=x64 --version=1.3.3 --icon=assets/osx/logo.icns --ignore=dist --ignore=builder.json --ignore=bower.json --ignore=README.md --ignore=.gitignore --ignore=preview.png",
     "pack:win": "npm run clean:win && electron-packager app \"IstexCollection\" --out=dist/win --platform=win32 --arch=ia32,x64 --version=1.3.3 --icon=assets/win/logo.ico --ignore=dist --ignore=builder.json --ignore=bower.json --ignore=README.md --ignore=.gitignore --ignore=preview.png",
     "pack:linux": "npm run clean:linux && electron-packager app \"IstexCollection\" --out=dist/linux --platform=linux --arch=ia32,x64 --version=1.3.3 --icon=assets/win/logo.ico --ignore=dist --ignore=builder.json --ignore=bower.json --ignore=README.md --ignore=.gitignore --ignore=preview.png",

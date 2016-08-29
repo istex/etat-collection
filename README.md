@@ -3,6 +3,11 @@ Electron app permettant de renvoyer un CSV etat de collection ISTEX
 
 ![SCREENSHOT](https://raw.githubusercontent.com/istex/etat-collection/master/screenshot.png)
 
+Technos : 
+- ElectronJS
+- Angular
+- Sass
+- MaterializeCSS
 
 ## Utilisation
 
